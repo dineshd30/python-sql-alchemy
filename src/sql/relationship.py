@@ -66,6 +66,10 @@ class Post(Base):
         return f"Post(id={self.id}, title={self.title}, content={self.content})"
 
 
+def get_session():
+    return session()
+
+
 def main() -> None:
     Base.metadata.create_all(engine)
 
